@@ -48,9 +48,44 @@ To run the code in this tutorial, you will need to have Python 3 installed on yo
     Scikit-learn
 
 You can install these modules using pip or conda, depending on your preferred package manager.
-License
 
+# Using a Virtual Environment
+It’s recommended to work inside a virtual environment to isolate dependencies for this 
+## 1. Create a virtual environment in the root folder
+```bash
+python -m venv .venv
+```
+> This will create a folder named .venv containing an isolated Python environment
 
+## 2. Activate the virtual environment
+- On Windows (PowerShell):
+```
+.\.venv\Scripts\activate
+```
+- On Linux / macOS:
+```
+source .venv/bin/activate
+```
+Once activated, your terminal prompt should show the environment name
+## 3. Install required dependencies
+```bash
+pip install -r requirements.txt
+```
+> If you’re using Anaconda, you can alternatively run:
+>```bash
+>conda install --file requirements.txt
+>```
+## 4. Verify installation
+To make sure everything is set up correctly:
+```bash
+python --version
+pip list
+```
+## 💡 Tip
+If you install new packages while working on the project, you can update the requirements file with:
+```bash
+pip freeze > requirements.txt
+```
 # Contributing
 
 If you would like to contribute to this tutorial, feel free to submit a pull request. We welcome contributions from the community and are happy to review and merge in new features and improvements.
